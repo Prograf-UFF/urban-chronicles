@@ -1,0 +1,39 @@
+.widget {
+  /* menu position scheme*/
+  position: absolute;
+
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  
+  width: 140px;
+
+  padding: 10px;
+
+  /* menu style */
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.90);
+}
+
+.submenu {
+  right: 90px;
+}
+
+.toogle-button {
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 8px;
+}
+.item {
+  float:left;
+}
+.label {
+  margin-top: -5px;
+  font-size: 12px;
+}
+
+mat-form-field {
+  width: 130px !important;  
+}
+

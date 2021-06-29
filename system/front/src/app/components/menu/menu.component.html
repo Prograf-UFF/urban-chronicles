@@ -1,0 +1,26 @@
+<div class="menu top right">
+
+  <button class="item" mat-button (click)="this.buttonClicked('config')">
+    <mat-icon [color]="this.state.configActive ? 'warn' : 'primary'">settings</mat-icon>
+    <div [ngClass]="{'label': true}">Config</div>
+  </button>
+
+  <button class="item" mat-button (click)="this.buttonClicked('matrix')">
+    <mat-icon [color]="this.state.matrixActive ? 'warn' : 'primary'">apps</mat-icon>
+    <div [ngClass]="{'label': true}">Matrix</div>
+  </button>
+
+  <button class="item" mat-button (click)="this.buttonClicked('layers')">
+    <mat-icon [color]="this.state.layersActive ? 'warn' : 'primary'">layers</mat-icon>
+    <div [ngClass]="{'label': true}">Layers</div>
+  </button>
+
+  <button class="toogle-button" mat-button (click)="this.toggleLegend()">
+    <mat-icon class="item" [color]="this.state.legendActive ? 'warn' : 'primary'">color_lens</mat-icon>
+    <div [ngClass]="{'label': true}">Legend</div>
+  </button>
+
+</div>
+
+<app-config></app-config>
+<app-layers></app-layers>

@@ -1,0 +1,128 @@
+<div class="widget top left" [style.opacity]="this.state.matrixActive ? 100 : 0"
+    [style.z-index]="this.state.matrixActive ? 2 : -1">
+    <mat-toolbar class="centered mat-toolbar-top">
+        <form class="options" [style.fontSize.px]="fontSizeControl.value">
+
+            <mat-form-field id='year' [color]="colorControl.value">
+                <mat-label>Year Step</mat-label>
+                <mat-select [value]="''+this.state.activeSummaryParameters.yearStep"
+                    (selectionChange)="this.yearStepSelectChanged($event)">
+                    <mat-option *ngFor="let step of this.data.meta.yearStep" [value]="step">
+                        {{step}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field [color]="colorControl.value">
+                <mat-label>Attributes</mat-label>
+                <mat-select [value]="this.state.activeSummaryParameters.attribute"
+                    (selectionChange)="this.attributeSelectChanged($event)">
+                    <mat-option *ngFor="let attr of this.data.meta.attributes | keyvalue" [value]="attr.key">
+                        {{attr.key.toUpperCase()}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field [color]="colorControl.value">
+                <mat-label>Categories</mat-label>
+                <mat-select [value]="this.state.activeSummaryParameters.category"
+                    (selectionChange)="this.categorySelectChanged($event)">
+                    <mat-option *ngFor="let cat of this.getCategories()" [value]="cat" [disabled]="cat === 'NONE'">
+                        {{cat.toUpperCase()}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field [color]="colorControl.value">
+                <mat-label>Metrics</mat-label>
+                <mat-select [value]="this.state.activeSummaryParameters.metric"
+                    (selectionChange)="this.metricSelectChanged($event)">
+                    <mat-option *ngFor="let met of this.getMetrics()" [value]="met">
+                        {{met.toUpperCase()}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field [color]="colorControl.value">
+                <mat-label>Mode</mat-label>
+                <mat-select [value]="this.state.activeSummaryParameters.mode"
+                    (selectionChange)="this.modeSelectChanged($event)">
+                    <mat-option *ngFor="let mode of this.data.meta.modes" [value]="mode">
+                        {{mode === 'change' ? 'VALUE' : 'CHANGE'}} & {{mode.toUpperCase()}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field [color]="colorControl.value">
+                <mat-label>Sort Matrix by</mat-label>
+                <mat-select
+                    [value]="+this.state.activeSortParameters.sortBy ? 'year' : this.state.activeSortParameters.sortBy"
+                    (selectionChange)="this.sortSelectChanged($event)">
+                    <mat-option *ngFor="let sort of this.data.meta.sortBy" [value]="sort" [disabled]="sort === 'year'">
+                        {{sort.toUpperCase()}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        </form>
+    </mat-toolbar>
+
+    <div class="line" #line></div>
+
+    <mat-divider></mat-divider>
+
+    <div class="matrix" #matrix></div>
+
+    <mat-toolbar class="navigation mat-toolbar-bottom">
+        <button class="item" mat-button (click)="this.activeFilters()">
+            <mat-icon [color]="this.getFilterIconColor()">view_agenda</mat-icon>
+        </button>
+
+        <button mat-button [disabled]="this.state.activeLevel === 'borough'"
+            (click)="this.navButtonClicked('borough')">{{this.state.activeConfigParameters.borough}}</button>
+
+        <div class="centered" *ngIf="this.state.activeGeometryParameters.neighborhood">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+            <button mat-button [disabled]="this.state.activeLevel === 'neighborhood'"
+                (click)="this.navButtonClicked('neighborhood')">{{this.state.activeGeometryParameters.neighborhood | slice:0:22}}{{this.state.activeGeometryParameters.neighborhood.length >= 22 ? '...' : ''}}</button>
+        </div>
+
+        <div class="centered" *ngIf="this.state.activeGeometryParameters.block">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+            <button mat-button [disabled]="this.state.activeLevel === 'block'"
+                (click)="this.navButtonClicked('block')">{{this.state.activeGeometryParameters.block}}</button>
+        </div>
+
+        <span class="navigation-spacer"></span>
+
+        <div class="centered">
+            <div class="navigation-label">Page</div>
+            <input class="current" #currentPage matInput [value]="this.state.activePageParameters.currentPage + 1" (change)="this.navPageChanged(currentPage.value)">
+            <div class="navigation-label">
+                /{{
+                   this.state.activePageParameters.totalPages
+                 }}
+            </div>
+            <button mat-icon-button aria-label="Left" (click)="this.navPageChanged('first')"
+                [disabled]="this.state.activePageParameters.currentPage === 0">
+                <mat-icon>first_page</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="Left" (click)="this.navPageChanged('left')"
+                [disabled]="this.state.activePageParameters.currentPage === 0">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="Right" (click)="this.navPageChanged('right')"
+                [disabled]="this.state.activePageParameters.currentPage === this.state.activePageParameters.totalPages-1">
+                <mat-icon>keyboard_arrow_right</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="Right" (click)="this.navPageChanged('last')"
+                [disabled]="this.state.activePageParameters.currentPage === this.state.activePageParameters.totalPages-1">
+                <mat-icon>last_page</mat-icon>
+            </button>
+        </div>
+    </mat-toolbar>
+</div>
+
+<app-tooltip [isActive]="this.tooltip.show" [top]="this.tooltip.top" [left]="this.tooltip.left"
+    [info]="this.tooltip.info">
+</app-tooltip>

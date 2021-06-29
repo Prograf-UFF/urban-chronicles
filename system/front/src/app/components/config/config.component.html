@@ -1,0 +1,45 @@
+<div class="widget top submenu" [style.opacity]="this.state.configActive ? 100 : 0"
+  [style.z-index]="this.state.configActive ? 2 : -1">
+  <form class="options" [style.fontSize.px]="fontSizeControl.value">
+    <mat-form-field [color]="colorControl.value">
+      <mat-label>Borough</mat-label>
+      <mat-select [value]="this.state.activeConfigParameters.borough"
+        (selectionChange)="this.boroughSelectChanged($event)">
+        <mat-option *ngFor="let boro of this.data.meta.boroughs" [value]="boro">
+          {{boro.toUpperCase()}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field [color]="colorControl.value">
+      <mat-label>Polygons</mat-label>
+      <mat-select [value]="this.state.activeConfigParameters.polygon"
+        (selectionChange)="this.polygonsSelectChanged($event)">
+        <mat-option *ngFor="let poly of this.data.meta.polygons" [value]="poly">
+          {{poly.toUpperCase()}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field [color]="colorControl.value">
+      <mat-label>Navigation</mat-label>
+      <mat-select [value]="this.state.activeConfigParameters.navigation"
+        (selectionChange)="this.navigationSelectChanged($event)">
+        <mat-option *ngFor="let nav of this.data.meta.navigation" [value]="nav">
+          {{nav.toUpperCase()}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field [color]="colorControl.value">
+      <mat-label>Map mode</mat-label>
+      <mat-select [value]="this.state.activeConfigParameters.mode"
+        (selectionChange)="this.mapModeSelectChanged($event)">
+        <mat-option *ngFor="let mode of this.data.meta.modes" [value]="mode">
+          {{mode.toUpperCase()}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+
+</div>

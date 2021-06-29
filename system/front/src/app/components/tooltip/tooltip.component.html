@@ -1,0 +1,32 @@
+<div [class]="this.info.line === undefined ? 'widgetMat' : 'widgetLine'" 
+[style.opacity]="this.isActive ? 100 : 0" [style.z-index]="this.isActive ? 5 : -1"
+[style.left.px]="this.left"
+[style.top.px]="this.top">
+
+<mat-toolbar class="mat-toolbar-top header" *ngIf="this.info.line === undefined">
+  <div class="centered">
+    <p class="levels-p">{{this.info.year}}</p>
+  </div>
+
+  <div class="centered">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+    <p class="levels-p">{{
+      this.info.data ?
+      (this.info.data.name | slice:0:22) : ''}}{{
+      this.info.data ?
+      (this.info.data.name.length >= 22 ? '...' : '') : ''}}
+    </p>
+  </div>
+</mat-toolbar>
+<div *ngIf="this.info.line === undefined" style="width: 100%; height: calc(100% - 30px);">
+  <div class="centered">
+    <p class="levels-p">{{this.tooltipContent()}}</p>
+  </div>
+</div>
+
+<mat-toolbar class="mat-toolbar-top header centered" *ngIf="this.info.line">
+  <div class="centered">
+    <p class="levels-p">{{this.info.line}}</p>
+  </div>
+</mat-toolbar>
+</div>

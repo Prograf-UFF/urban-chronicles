@@ -1,0 +1,88 @@
+<div class="widget bottom right" [style.opacity]="this.state.legendActive ? 100 : 0"
+[style.z-index]="this.state.legendActive ? 2 : -1">
+  <div class="levels">
+    <mat-toolbar class="mat-toolbar-top">
+      <div class="centered">
+        <p class="levels-p">{{this.state.activeGeometryParameters.year}}</p>
+      </div>
+
+      <div class="centered">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeConfigParameters.borough}}</p>
+      </div>
+
+      <div class="centered" *ngIf="this.state.activeGeometryParameters.neighborhood">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeGeometryParameters.neighborhood | slice:0:22}}{{this.state.activeGeometryParameters.neighborhood.length >= 22 ? '...' : ''}}</p>
+      </div>
+
+      <div class="centered" *ngIf="this.state.activeGeometryParameters.block">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeGeometryParameters.block}}</p>
+      </div>
+
+      <span class="spacer"></span>
+
+      <mat-checkbox class="check" [color]='"warn"' (change)="this.changeCMap()" >Percentile</mat-checkbox>
+    </mat-toolbar>
+  </div>
+  <div class="cmap">
+    <div style="display: flex; padding-left: 16px;">
+      <div class="centered">
+        <p class="levels-p">MAT</p>
+      </div>
+
+      <div class="centered">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeSummaryParameters.attribute.toUpperCase()}}</p>
+      </div>
+
+      <div class="centered" *ngIf="this.state.activeSummaryParameters.category !== 'NONE'">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeSummaryParameters.category.toUpperCase()}}</p>
+      </div>
+
+      <div class="centered">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeSummaryParameters.metric.toUpperCase()}}</p>
+      </div>
+
+      <div class="centered">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeSummaryParameters.mode.toUpperCase()}}</p>
+      </div>
+    </div>
+    <div #matcolormap style="height: 70px" class="bottom"></div>
+  </div>
+
+
+  <div class="cmap">
+    <div style="display: flex; padding-left: 16px;">
+      <div class="centered">
+        <p class="levels-p">MAP</p>
+      </div>
+
+      <div class="centered">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeSummaryParameters.attribute.toUpperCase()}}</p>
+      </div>
+
+      <div class="centered" *ngIf="this.state.activeSummaryParameters.category !== 'NONE'">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeSummaryParameters.category.toUpperCase()}}</p>
+      </div>
+
+      <div class="centered">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeSummaryParameters.metric.toUpperCase()}}</p>
+      </div>
+
+      <div class="centered">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        <p class="levels-p">{{this.state.activeConfigParameters.mode.toUpperCase()}}</p>
+      </div>
+    </div>
+    <div #mapcolormap style="height: 70px" class="bottom"></div>
+  </div>
+
+</div>

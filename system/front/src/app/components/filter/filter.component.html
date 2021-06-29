@@ -1,0 +1,57 @@
+<div class="widget top left" [style.opacity]="this.state.matrixActive && this.state.filterActive ? 100 : 0"
+    [style.z-index]="this.state.matrixActive && this.state.filterActive ? 2 : -1">
+
+    <div class="filtersContainer">
+        <div *ngFor="let hist of this.data.filters | keyvalue" class="filter">
+            <mat-toolbar class="centered mat-toolbar-top">
+                <span style="margin-right: 20px;">{{hist.key}}</span>
+                <form class="options" [style.fontSize.px]="fontSizeControl.value">
+
+                    <mat-form-field [color]="colorControl.value">
+                        <mat-label>Attributes</mat-label>
+                        <mat-select [value]="this.state.activeFilterParameters[hist.key].attribute"
+                            (selectionChange)="this.attributeSelectChanged(hist.key, $event)">
+                            <mat-option *ngFor="let attr of this.getAttributes()" [value]="attr">
+                                {{attr.toUpperCase()}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field [color]="colorControl.value"
+                        *ngIf="this.state.activeFilterParameters[hist.key].attribute !== 'LANDUSE' && this.state.activeFilterParameters[hist.key].attribute !== 'SPDIST1'">
+                        <mat-label>Categories</mat-label>
+                        <mat-select [value]="this.state.activeFilterParameters[hist.key].category"
+                            (selectionChange)="this.categorySelectChanged(hist.key, $event)">
+                            <mat-option *ngFor="let cat of this.getCategory(hist.key)" [value]="cat">
+                                {{cat.toUpperCase()}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </form>
+
+                <span class="spacer"></span>
+
+                <button mat-icon-button (click)="this.delFilter(hist.key)">
+                    <mat-icon [color]="'warn'">cancel</mat-icon>
+                </button>
+            </mat-toolbar>
+            <div #filter class="bar-chart"></div>
+        </div>
+    </div>
+
+    <mat-toolbar class="addToolbar mat-toolbar-bottom">
+        <button mat-icon-button (click)="this.addFilter()">
+            <mat-icon [color]="'primary'">add_circle</mat-icon>
+        </button>
+
+        <span style="font-size: 12px !important; margin-right: 10px;">Boolean expression:</span>
+        <input style="width: 25% !important;" #currentFilterExp matInput [(ngModel)]="this.filterExp">
+
+        <span class="spacer"></span>
+
+        <button mat-icon-button (click)="this.updateSummary()">
+            <mat-icon [color]="'primary'">play_circle_filled</mat-icon>
+        </button>
+    </mat-toolbar>
+</div>

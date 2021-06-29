@@ -1,0 +1,9 @@
+<div class="widget submenu" [style.opacity]="this.state.layersActive ? 100 : 0" [style.z-index]="this.state.layersActive ? 2 : -1">
+
+  <button class="item" mat-button (click)="this.layerSelected('pops')">
+    <mat-icon [color]="this.state.activeLayer === 'pops' ? 'warn' : 'primary'">location_on</mat-icon>
+    <div [ngClass]="{'label': true}">POPs</div>
+  </button>
+
+
+</div>

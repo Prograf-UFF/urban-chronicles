@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files\Model">
+      <UniqueIdentifier>{9907e8cb-1edf-4913-b071-d2af7b82d01f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model">
+      <UniqueIdentifier>{fae49925-bb6a-4aa5-b461-72c272a7a67e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Server">
+      <UniqueIdentifier>{3dae105e-60a2-41ab-ab5a-91dbeb2220ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Server">
+      <UniqueIdentifier>{fe5b28c6-afb7-4199-ace7-9c784d38cac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Controller">
+      <UniqueIdentifier>{e51801a4-63da-47cf-8d09-605b40daef9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Controller">
+      <UniqueIdentifier>{95051bc6-1f1b-4210-bdb3-629fca1c8dcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{a6ab56d9-e78c-44a0-a544-03272c12e37e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{57f7fc33-3657-4eb0-ab91-e4c91f256b77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Model\Request">
+      <UniqueIdentifier>{f846fece-1938-4f48-8319-dcfa1eeb3d40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model\Request">
+      <UniqueIdentifier>{0bc7a9be-e8b0-4a10-867d-af497164089c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model\QueryHandler">
+      <UniqueIdentifier>{909b9a8f-6cc9-4f9e-9b9e-bcc6fe7290dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Model\QueryHandler">
+      <UniqueIdentifier>{80474b7a-0d39-4d84-a513-38600a8bc136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\service">
+      <UniqueIdentifier>{6a544153-40b4-4321-901c-5e5f1e1bd411}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\service">
+      <UniqueIdentifier>{25d7de6b-73d5-4d9e-a59e-8a3597d3d481}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model\QueryHandler\Worker">
+      <UniqueIdentifier>{0c079a8d-8898-4582-b5d9-9f928d512363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Model\QueryHandler\Worker">
+      <UniqueIdentifier>{e30b8032-40c0-42a3-828c-d098c816bc98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlutoModel.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="PlutoServer.cpp">
+      <Filter>Source Files\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="PlutoController.cpp">
+      <Filter>Source Files\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributesDS.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="PlutoLot.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometriesDS.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractDS.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="PlutoNeigh.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="PlutoBlock.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="PlutoBorough.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractRequest.cpp">
+      <Filter>Source Files\Model\Request</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometryRequest.cpp">
+      <Filter>Source Files\Model\Request</Filter>
+    </ClCompile>
+    <ClCompile Include="HistogramRequest.cpp">
+      <Filter>Source Files\Model\Request</Filter>
+    </ClCompile>
+    <ClCompile Include="SummaryRequest.cpp">
+      <Filter>Source Files\Model\Request</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometryQueryHandler.cpp">
+      <Filter>Source Files\Model\QueryHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="SummaryQueryHandler.cpp">
+      <Filter>Source Files\Model\QueryHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="HistogramQueryHandler.cpp">
+      <Filter>Source Files\Model\QueryHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="FilterRequest.cpp">
+      <Filter>Source Files\Model\Request</Filter>
+    </ClCompile>
+    <ClCompile Include="FilterRequestBoroughData.cpp">
+      <Filter>Source Files\Model\Request</Filter>
+    </ClCompile>
+    <ClCompile Include="FilterQueryHandler.cpp">
+      <Filter>Source Files\Model\QueryHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="POPData.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="POPRequest.cpp">
+      <Filter>Source Files\Model\Request</Filter>
+    </ClCompile>
+    <ClCompile Include="mongoose.c">
+      <Filter>Source Files\service</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockDataRequest.cpp">
+      <Filter>Source Files\Model\Request</Filter>
+    </ClCompile>
+    <ClCompile Include="FilterQueryHandlerNeighWorker.cpp">
+      <Filter>Source Files\Model\QueryHandler\Worker</Filter>
+    </ClCompile>
+    <ClCompile Include="SummaryQueryHandlerBlockWorker.cpp">
+      <Filter>Source Files\Model\QueryHandler\Worker</Filter>
+    </ClCompile>
+    <ClCompile Include="HistogramQueryHandlerWorker.cpp">
+      <Filter>Source Files\Model\QueryHandler\Worker</Filter>
+    </ClCompile>
+    <ClCompile Include="SummaryQueryHandlerNeighWorker.cpp">
+      <Filter>Source Files\Model\QueryHandler\Worker</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockDataQueryHandler.cpp">
+      <Filter>Source Files\Model\QueryHandler</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PlutoModel.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="PlutoServer.h">
+      <Filter>Header Files\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="PlutoController.h">
+      <Filter>Header Files\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributesDS.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="PlutoLot.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometriesDS.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractDS.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="PlutoNeigh.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="PlutoBlock.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="PlutoBorough.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractRequest.h">
+      <Filter>Header Files\Model\Request</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometryRequest.h">
+      <Filter>Header Files\Model\Request</Filter>
+    </ClInclude>
+    <ClInclude Include="HistogramRequest.h">
+      <Filter>Header Files\Model\Request</Filter>
+    </ClInclude>
+    <ClInclude Include="SummaryRequest.h">
+      <Filter>Header Files\Model\Request</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometryQueryHandler.h">
+      <Filter>Header Files\Model\QueryHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="SummaryQueryHandler.h">
+      <Filter>Header Files\Model\QueryHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="HistogramQueryHandler.h">
+      <Filter>Header Files\Model\QueryHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterRequest.h">
+      <Filter>Header Files\Model\Request</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterRequestBoroughData.h">
+      <Filter>Header Files\Model\Request</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterQueryHandler.h">
+      <Filter>Header Files\Model\QueryHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="POPData.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="POPRequest.h">
+      <Filter>Header Files\Model\Request</Filter>
+    </ClInclude>
+    <ClInclude Include="mongoose.h">
+      <Filter>Header Files\service</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockDataRequest.h">
+      <Filter>Header Files\Model\Request</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterQueryHandlerNeighWorker.h">
+      <Filter>Header Files\Model\QueryHandler\Worker</Filter>
+    </ClInclude>
+    <ClInclude Include="HistogramQueryHandlerWorker.h">
+      <Filter>Header Files\Model\QueryHandler\Worker</Filter>
+    </ClInclude>
+    <ClInclude Include="SummaryQueryHandlerBlockWorker.h">
+      <Filter>Header Files\Model\QueryHandler\Worker</Filter>
+    </ClInclude>
+    <ClInclude Include="SummaryQueryHandlerNeighWorker.h">
+      <Filter>Header Files\Model\QueryHandler\Worker</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockDataQueryHandler.h">
+      <Filter>Header Files\Model\QueryHandler</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
