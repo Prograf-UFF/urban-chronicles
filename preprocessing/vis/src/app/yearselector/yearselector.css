@@ -1,0 +1,15 @@
+#timeline-xAxis line{
+    stroke: #666;
+}
+
+#timeline-xAxis path{
+    stroke: #666;
+}
+
+.timeline-year {
+    fill: #666
+}
+
+.timeline-year-selected {
+    fill: orange;
+}

@@ -1,0 +1,57 @@
+<div class="main-menu">
+  <!-- Vis Menu -->
+  <button class="item" mat-button #tooltipVis="matTooltip" matTooltip="Visualization" [matTooltipPosition]="'left'"
+    [matTooltipShowDelay]="2000" (click)="tooltipVis.hide(); this.showSubMenu('vis');">
+    <mat-icon [color]="this.showVisMenu ? 'warn' : 'primary'">bar_chart</mat-icon>
+    <div [ngClass]="{'item-label': true, 'active': this.showVisMenu}">Vis</div>
+  </button>
+
+  <!-- Polygons menu -->
+  <button class="item" mat-button #tooltipPoly="matTooltip" matTooltip="Polygon Layers" [matTooltipPosition]="'left'"
+    [matTooltipShowDelay]="2000" (click)="tooltipPoly.hide(); this.showSubMenu('poly');">
+    <mat-icon [color]="this.showPolyMenu ? 'warn' : 'primary'">category</mat-icon>
+    <div [ngClass]="{'item-label': true, 'active': this.showPolyMenu}">Layer</div>
+  </button>
+
+  <!-- Settings menu -->
+  <button class="item" mat-button #tooltipSettings="matTooltip" matTooltip="Settings Menu" [matTooltipPosition]="'left'"
+    [matTooltipShowDelay]="2000" (click)="tooltipSettings.hide(); this.showSubMenu('settings')">
+    <mat-icon [color]="this.showSettingsMenu ? 'warn' : 'primary'">settings</mat-icon>
+    <div [ngClass]="{'item-label': true, 'active': this.showSettingsMenu}">Settings</div>
+  </button>
+</div>
+
+<!-- Vis sub-menu -->
+<div *ngIf="showVisMenu" class="sub-menu-col" style="top: 0px;">
+  <div class="sub-menu-row">
+    <button class="item" *ngFor="let v of this.state.vis" mat-button [matTooltip]="v" [matTooltipPosition]="'above'"
+      [matTooltipShowDelay]="2000" (click)="this.showVisMenu = false; this.loadVis(v);">
+      <mat-icon [color]="this._state.activeVis === v ? 'warn' : 'primary'">layers</mat-icon>
+      <div [ngClass]="{'item-label': true, 'active': this._state.activeVis === v}">{{v}}</div>
+    </button>
+  </div>
+</div>
+
+<!-- Polygons sub-menu -->
+<div *ngIf="showPolyMenu" class="sub-menu-col" style="top: 57px;">
+  <div class="sub-menu-row">
+    <button class="item" *ngFor="let v of this.state.customPolyLayers" mat-button [matTooltip]="v" [matTooltipPosition]="'above'"
+    [matTooltipShowDelay]="2000" (click)="this.loadCustomLayer(v); ">
+    <mat-icon [color]="this._state.activeCustomPoly === v ? 'warn' : 'primary'">layers</mat-icon>
+    <div [ngClass]="{'item-label': true, 'active': this._state.activeCustomPoly === v}">{{v}}</div>
+  </button>
+  </div>
+</div>
+
+<!-- Settings sub-menu -->
+<div *ngIf="showSettingsMenu" class="sub-menu-col" style="top: 114px">
+  <div class="sub-menu-row">
+    <div class="sub-menu-row">
+      <button class="item" mat-button [matTooltip]="'Show Colormap'" [matTooltipPosition]="'above'"
+        [matTooltipShowDelay]="2000" (click)="this._state.showColorMap = !this._state.showColorMap;">
+        <mat-icon [color]="this._state.showColorMap ? 'warn' : 'primary' ">color_lens</mat-icon>
+        <div  [ngClass]="{'item-label': true, 'active': this._state.showColorMap}">Color Map</div>
+      </button>
+    </div>
+  </div>
+</div>

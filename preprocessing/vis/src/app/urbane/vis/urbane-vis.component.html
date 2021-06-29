@@ -1,0 +1,98 @@
+<div class="vis-widget" [ngClass]="{'hidden': !this._state.activeVis}" >
+  <!-- <div class="top-menu">
+    <mat-button-toggle-group class="group" name="visMode" aria-label="Vis Mode">
+      <mat-button-toggle class="toggle" value="datai-Info" (click)="this.updateVis('Info')">Info</mat-button-toggle>
+      <mat-button-toggle class="toggle" value="neigh-Graph"(click)="this.updateVis('Graph')">Graph</mat-button-toggle>
+      <mat-button-toggle class="toggle" value="neigh-Table"(click)="this.updateVis('Table')">Table</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div> -->
+
+  <!-- Parallel coordinates chart -->
+  <!-- <div #parallel class="parallel"></div> -->
+
+  <div class="sub-menu-col" 
+        id="data-selectors" 
+        *ngIf="!this.isOnNoneLevel();">
+    <div class="sub-menu-row" 
+          style="width: 100%;">
+      <mat-form-field class="selection" 
+                      [floatLabel]="'always'" 
+                      style="padding: 3px;">
+        <mat-select style="color: #222;" 
+                    placeholder="Borough Selection" 
+                    [(value)]="this._state.boroughSelected" 
+                    (selectionChange)="this.onBoroughSelected()">
+          <mat-option *ngFor="let st of this._state.boroughsAvailable" [value]="st">
+            {{ st }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field 
+              class="selection" 
+              [floatLabel]="'always'" 
+              style="padding: 3px;">
+        <mat-select 
+              style="color: #222;" 
+              placeholder="Attributes" 
+              [(value)]="this._state.attributeNameSelected" 
+              (selectionChange)="this.updateSubCategorySelected()">
+          <mat-option *ngFor="let st of this._state.attributeAvailable" 
+                      [value]="st">
+            {{ st }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="selection" 
+                      [floatLabel]="'always'" 
+                      style="padding: 3px;" 
+                      *ngIf="this._state.blockList.length > 0">
+        <mat-select style="color: #222;" 
+                    placeholder="Block list" 
+                    [(value)]="this._state.blockCodeSelected" 
+                    (selectionChange)="this.onBlockSelectionChanged()">
+          <mat-option *ngFor="let st of this._state.blockList" 
+                      [value]="st">
+            {{ st }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="sub-menu-row" 
+        id="data-selectors" 
+        *ngIf="this._state.attributeNameSelected != ''">
+          <p style="padding: 1px; display: block;"> Min. Value: {{ this.minValueSelected }}</p>
+          <p style="padding: 1px; display: block;"> Max. Value: {{ this.maxValueSelected }}</p>
+
+          <mat-slider [min]="this.sliderMinValue" 
+                      [max]="this.sliderMaxValue" 
+                      [step]="this.sliderStep" 
+                      thumbLabel 
+                      tickInterval="auto"
+                      [(value)]="this.minValueSelected" 
+                      (change)="this.onMinValueChanged()"
+                      #minValueSlider>
+          </mat-slider>
+
+          <mat-slider [min]="this.sliderMinValue" 
+                      [max]="this.sliderMaxValue" 
+                      [step]="this.sliderStep"
+                      thumbLabel 
+                      tickInterval="auto" 
+                      [(value)]="this.maxValueSelected" 
+                      (change)="this.onMaxValueChanged()"
+                      #maxValueSlider>
+          </mat-slider>
+    </div>
+
+    <div class="sub-menu-row" style="width: 100%;">
+      <p *ngIf="this._state.lotCodeSelected !== undefined">Selected Lot code: {{ this._state.lotCodeSelected }}</p> 
+    </div>
+  </div>
+  <!-- <div #yearSlider id="year-slider"></div> -->
+  
+  <div id="flowstrates-table" #flowstratesTable></div>
+
+</div>

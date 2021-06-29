@@ -1,0 +1,22 @@
+[
+  {
+    "id": "surface",
+    "type": "physical"
+  },
+  {
+    "id": "coastline",
+    "type": "physical"
+  },
+  {
+    "id": "landuse",
+    "type": "physical"
+  },
+  {
+    "id": "routes",
+    "type": "physical"
+  },
+  {
+    "id": "builds",
+    "type": "building"
+  }
+]

@@ -1,0 +1,9 @@
+flask
+flask_cors
+jsonpickle
+mapbox_earcut
+pyshp
+pylint
+pygeos
+pyproj
+Shapely

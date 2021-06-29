@@ -1,0 +1,13 @@
+#version 300 es
+
+in highp float vScalar;
+out highp vec4 fragColor;
+
+uniform sampler2D uColorMap;
+
+void main() {
+  mediump float dist  = length(gl_PointCoord.xy - vec2(.5, .5));
+  dist = dist > 0.5 ? 0.0 : 1.0;
+  
+  fragColor = vec4(texture(uColorMap, vec2(vScalar, 0.5)).rgb, dist);
+}

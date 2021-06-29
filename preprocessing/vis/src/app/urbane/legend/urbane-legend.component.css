@@ -1,0 +1,38 @@
+.vis-legend {
+  /* menu position scheme*/
+  position:absolute;
+
+  /* menu location */
+  bottom: 0;
+  right: 0;
+
+  /* margins */
+  margin-bottom: 10px;
+  margin-right: 10px;
+
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  
+  width: 300px;
+  height: 100px;
+
+  /* menu style */
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#layerLegend {
+  width: 100%;
+  height: 50%;
+}
+
+#diffTableLegend {
+  width: 100%;
+  height: 50%;
+}
+
+.hidden {
+  visibility: hidden;
+}

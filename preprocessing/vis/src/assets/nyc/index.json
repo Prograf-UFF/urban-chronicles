@@ -1,0 +1,37 @@
+[
+  {
+    "id": "surface",
+    "type": "physical"
+  },
+  {
+    "id": "coastline",
+    "type": "physical"
+  },
+  {
+    "id": "parks",
+    "type": "physical"
+  },
+  {
+    "id": "water",
+    "type": "physical"
+  },
+  {
+    "id": "routes",
+    "type": "physical",
+    "skip": false
+  },
+  {
+    "id": "neighs",
+    "type": "polygon",
+    "color": "sequential_blue",
+    "visible": true,
+    "selectable": true,
+    "skip": true
+  },
+  {
+    "id": "buildings",
+    "type": "building",
+    "selectable": true,
+    "skip" : true
+  }
+]
