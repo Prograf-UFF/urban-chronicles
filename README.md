@@ -58,7 +58,11 @@ Now, download the dataset provided [here](https://drive.google.com/file/d/1BlEny
 
 ### Web Client
 
-If you want to go ahead and use Urban Chronicles without going through the preprocessing phase described above, you can download the input dataset [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view), and follow the steps bellow:
+If you want to go ahead and use Urban Chronicles without going through the preprocessing phase described above according to your OS:
+
+#### Linux and MacOS
+
+First, download the input dataset [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view), and follow the steps bellow:
 
 1. Once downloaded preprocessed file mentioned above, go to the root folder of this repository and extract the file `data.zip` inside `system/`
 
@@ -73,7 +77,13 @@ unzip path/to/data.zip -d ./system/
 
 3. Finally, go to `localhost:4200` to start using Urban Chronicles 
 
+#### Windows
 
+1. First, download the `.zip` bundle [here](https://drive.google.com/file/d/1xHNegEY7fb3UHysTLZEOR-yg0bWHZn9u/view?usp=sharing)
+
+2. Unzip the bundle inside `system/`
+
+3. Run `runUrbanChroniclesServer.bat` by double clicking it 
 
 ### Online Version
 
