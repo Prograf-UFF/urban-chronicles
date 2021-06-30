@@ -31,10 +31,10 @@ So far, we only fully support linux-based machines
 ### Linux (Ubuntu)
 
 1. Download Qt 5.14 (or later version) at [qt.io/download-open-source](https://www.qt.io/download-open-source/) and install it.
-2. Install GCC 4.8 (or later version)
+2. Install GCC 9.3.0 (or later version)
 
 	```
-	sudo apt-get install gcc-4.8 g++-4.8
+	sudo apt-get install gcc-9.3.0 g++-9.3.0
 	```
 3. Install Node.js:
 
