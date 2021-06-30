@@ -83,6 +83,21 @@ unzip path/to/data.zip -d ./system/
 
 2. Unzip the bundle inside `system/`
 
+```
+urban-chronicle
+│   README.md
+|
+└───system
+│   │   ...
+│   │   Release
+|   |   runUrbanChroniclesServer.bat
+|   |   ...
+│   
+│   
+└───preprocessing
+    | ...
+```
+
 3. Run `runUrbanChroniclesServer.bat` by double clicking it 
 
 ### Online Version
