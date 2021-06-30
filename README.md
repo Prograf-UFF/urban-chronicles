@@ -41,7 +41,21 @@ Now, download the dataset provided [here](https://drive.google.com/file/d/1BlEny
 
 ### Web Client
 
-If you want to go ahead and use Urban Chronicles without go through the preprocessing phase described above, you can download the input dataset [here](https://drive.google.com/file/d/14yp9XZYXrPJ4J5-ZBshkZNFybnSaSh9R/view?usp=sharing)
+If you want to go ahead and use Urban Chronicles without going through the preprocessing phase described above, you can download the input dataset [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view), and follow the steps bellow:
+
+1. Once downloaded preprocessed file mentioned above, go to the root folder of this repository and extract the file `data.zip` inside `system/`
+
+```
+unzip path/to/data.zip -d ./system/
+```
+
+2. Run the script that will load the Urban Chronicles data structure to the backend server:
+```
+./makerunfile.sh
+```
+
+3. Finally, go to localhost:4200 to start using Urban Chronicles 
+
 
 
 ### Online Version
