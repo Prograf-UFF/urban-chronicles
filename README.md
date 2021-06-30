@@ -1,6 +1,6 @@
 # Urban Chronicles
 
-Urban Chronicles is a web-based tool that allows the interactive exploration of zoning datasets.
+This repository contains the source code for Urban Chronicles, a visual analytics system that enables interactive exploration of changes in land use pattern. Using New York City’s Primary Land Use Tax Lot Output (PLUTO) as an example, the system allows the exploration of  the data over several years at different scales. Urban Chronicles supports on-the-fly aggregation and filtering operations by using a tree-based data structure that leverages the hierarchical nature of the data set to index the shape and attributes of geographical regions that change over time.
 
 The team includes:
 
@@ -16,13 +16,30 @@ The team includes:
 
 ## Table of contents
 
-* [Installing prerequisites](#installing-prerequisites)
-    * [Linux (Ubuntu)](#linux-ubuntu-linux-mint)
+* [Installation prerequisites](#installation-prerequisites)
+    * [Linux (Ubuntu)](#linux-ubuntu)
 * [Preprocessing Dataset](#preprocessing-dataset)
 * [Running Urban Chronicles](#running-urban-chronicles)
     * [Web client](#web-client)
     * [Online Version](#online-version)
 
+
+## Installation Prerequisites
+
+So far, we only fully support linux-based machines
+
+### Linux (Ubuntu)
+
+1. Download Qt 5.14 (or later version) at [qt.io/download-open-source](https://www.qt.io/download-open-source/) and install it.
+2. Install GCC 4.8 (or later version)
+
+	```
+	sudo apt-get install gcc-4.8 g++-4.8
+	```
+3. Install Node.js:
+
+	```
+	sudo apt-get install nodejs npm
 
 ## Preprocessing Dataset
 
@@ -54,7 +71,7 @@ unzip path/to/data.zip -d ./system/
 ./makerunfile.sh
 ```
 
-3. Finally, go to localhost:4200 to start using Urban Chronicles 
+3. Finally, go to `localhost:4200` to start using Urban Chronicles 
 
 
 
