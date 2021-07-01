@@ -235,7 +235,7 @@ class POPsHandler():
                     _fp.write(self.__delimiter)
                     neigh.exportData(_fp, self.__delimiter)
 
-if __name__ == '__main__':
+def run_process():
     fileName = "./Data/nycpops/nycpops"
     delimiter = ";"
     # fileName = "/media/claudio/Data/Projects/UFF/LABNY/MapPlutoResources/Neighborhood Tabulation Areas \
@@ -243,3 +243,6 @@ if __name__ == '__main__':
     # fullFilePath = "/media/claudio/Data/Projects/UFF/LABNY/MapPlutoResources/{borough}/{fileYear}/{fileName}"
     # .format(borough=_borough, fileYear=_year, fileName=_fileName)
     nh = POPsHandler(fileName, delimiter)
+
+if __name__ == '__main__':
+    run_process()

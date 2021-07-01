@@ -422,7 +422,8 @@ def consolidate_results(delimiter):
                     fpOut.write("{0}\n".format(elem))
             fpOut.write("\n{0}\n".format( delimiter.join( list(elemSet) ) ))
 
-if __name__ == '__main__':
+
+def run_process():
     # _boroughs = ["Manhattan", "Brooklyn"]
     delimiter = ";"
     # types = ["cd", "neigh"]
@@ -438,3 +439,5 @@ if __name__ == '__main__':
         # run_process(delimiter, typeData)
     # consolidate_results(delimiter)
 
+if __name__ == '__main__':
+    run_process()

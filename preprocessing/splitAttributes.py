@@ -61,7 +61,8 @@ def processBorough(borough, delimeter):
         splitAttributes.run(borough)
         print(borough, " End of ", year)
 
-if __name__ == '__main__':
+
+def run_process():
     # boroughs = ["Manhattan", "Brooklyn"]
     delimiter = ';'
     ps = []
@@ -72,3 +73,6 @@ if __name__ == '__main__':
         # processBorough(borough, delimeter)
     for p in ps:
         p.join()
+
+if __name__ == '__main__':
+    run_process()

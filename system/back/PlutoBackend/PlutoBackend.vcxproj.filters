@@ -162,6 +162,12 @@
     <ClCompile Include="BlockDataQueryHandler.cpp">
       <Filter>Source Files\Model\QueryHandler</Filter>
     </ClCompile>
+    <ClCompile Include="RegularSentenceWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SentenceParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PlutoModel.h">
@@ -256,6 +262,15 @@
     </ClInclude>
     <ClInclude Include="BlockDataQueryHandler.h">
       <Filter>Header Files\Model\QueryHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="ISentenceWorker.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RegularSentenceWorker.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SentenceParser.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -28,4 +28,7 @@ Backend/dist/
 *.spec
 Histogram/
 *.7z
+*.zip
+*.rar
+Release/
 

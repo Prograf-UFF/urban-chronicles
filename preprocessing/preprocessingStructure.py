@@ -349,7 +349,8 @@ def exportCommunityDistrictMeta():
     with open('./Data/Metas/cdNames.meta','w') as fp:
         fp.write(communityDistrictMeta)
 
-if __name__ == '__main__':
+
+def run_process():
     metaFolder = "./Data/Metas"
     if not os.path.exists(metaFolder):
         os.makedirs(metaFolder)
@@ -366,3 +367,6 @@ if __name__ == '__main__':
     processLotGeometries()
     processNeighborhoodCoordinates()
     processNeighborhoodGeometries()
+
+if __name__ == '__main__':
+    run_process()

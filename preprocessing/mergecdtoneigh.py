@@ -76,6 +76,10 @@ def outDatasetFile():
                 data = boroughDataset.get(bbl)
                 data.write(fp)
 
-handlerNeighData()
-handlerCDData()
-outDatasetFile()
+def run_process():
+    handlerNeighData()
+    handlerCDData()
+    outDatasetFile()
+
+if __name__ == '__main__':
+    run_process()
