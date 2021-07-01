@@ -19,14 +19,13 @@ The team includes:
 * [Installation prerequisites](#installation-prerequisites)
     * [Linux (Ubuntu)](#linux-ubuntu)
 * [Preprocessing Dataset](#preprocessing-dataset)
+    * [Linux (Ubuntu)](#linux-ubuntu)
 * [Running Urban Chronicles](#running-urban-chronicles)
     * [Web client](#web-client)
     * [Online Version](#online-version)
 
 
 ## Installation Prerequisites
-
-So far, we only fully support linux-based machines
 
 ### Linux (Ubuntu)
 
@@ -43,16 +42,54 @@ So far, we only fully support linux-based machines
 
 ## Preprocessing Dataset
 
-Urban Chronicles takes as input a modified version of the raw PLUTO dataset available [here](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). The New York Department of City Planning provides only one file per year, to make it easier to download all files since 2002, we bundled every file [here](https://drive.google.com/file/d/1BlEny9o1r7a0oWldhD8iVMPJiZmY33qw/view?usp=sharing).Below, are the steps necessary to the creation of Urban Chronicle's input files.
+Here we describe how to generate the input files for Urban Chronicles
 
-We first need to clone the repository:
+### Downloading the Dataset
+
+Urban Chronicles takes as input a modified version of the raw PLUTO dataset available [here](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). The New York Department of City Planning provides one set of files per year containing the geometry of the lots and the associated metadata. Below, are the steps necessary to the generation of Urban Chronicle's input files.
+
+If you want to skip downloading all files from the Department of City Planning website, we bundled every file [here](https://drive.google.com/file/d/1BlEny9o1r7a0oWldhD8iVMPJiZmY33qw/view?usp=sharing).
+
+
+1. Download every MapPLUTO file from 2002 to 2017 from [here](https://www1.nyc.gov/site/planning/data-maps/open-data/bytes-archive.page?sorts[year]=0) and organize them inside a folder following the structure below:
+
+
+```
+NewYorkCity
+|
+└───Bronx
+└───Brooklyn
+└───Queens
+└───Manhattan
+│   │   ...
+│   └───2002
+|   └───2003
+|   └───2004
+|   └───2005
+|   └───2006
+|   └───...
+|   └───2009.2
+|   └───...
+|   └───2017
+│       |   MNMapPLUTO.shp
+|       |   MNMapPLUTO.dbf
+|       |   MNMapPLUTO.prj
+|       |   MNMapPLUTO.shx
+|       |   ...
+└───StatenIsland
+    | ...
+
+```
+
+### Running Preprocessing Scripts
+
+1. We first need to clone the repository:
 
 ```
 git clone https://github.com/Prograf-UFF/PlutoVis.git
 ```
 
-Now, download the dataset provided [here](https://drive.google.com/file/d/1BlEny9o1r7a0oWldhD8iVMPJiZmY33qw/view?usp=sharing):
-
+2. 
 
 ## Running Urban Chronicles
 
@@ -68,6 +105,21 @@ First, download the input dataset [here](https://drive.google.com/file/d/1OPc8uD
 
 ```
 unzip path/to/data.zip -d ./system/
+
+
+urban-chronicle
+│   README.md
+|
+└───system
+│   │   ...
+│   └───data
+|       | 
+|       |
+|   |   ...
+│   
+└───preprocessing
+    | ...
+
 ```
 
 2. Run the script that will load the Urban Chronicles data structure to the backend server:
@@ -92,7 +144,6 @@ urban-chronicle
 │   │   Release
 |   |   runUrbanChroniclesServer.bat
 |   |   ...
-│   
 │   
 └───preprocessing
     | ...
