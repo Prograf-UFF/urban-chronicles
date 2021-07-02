@@ -15,7 +15,7 @@ from mergecdtoneigh import run_process as MCDNRun_process
 
 from preprocessingStructure import run_process as PSRun_process
 
-from customAttributePrecessing import reun_process as CAPRun_process
+from customAttributePrecessing import run_process as CAPRun_process
 
 
 if __name__ == '__main__':
