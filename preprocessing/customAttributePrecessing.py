@@ -59,7 +59,7 @@ class CustomAttributeProcessing:
     def dump(self, fileOutName):
         self.__highDS.dump(fileOutName)
 
-if __name__ == '__main__':
+def run_process():
     dataset_path_template = "./Data/{boro}/{boro}_fullFinalData_withNeighCode.out"
     file_path_template = "./Data/{boro}/neigh_{boro}_fullFinalData_withNeighCode_attributes_{type}.out"
     fileOutTemplate = "./Data/{boro}/neigh_{boro}_fullFinalData_withNeighCode_attributes_{type}_custom.out"
@@ -80,3 +80,6 @@ if __name__ == '__main__':
             os.remove(fileTemp)
         os.rename(highDSFileName, fileTemp)
         os.rename(fileOutName, highDSFileName)
+
+if __name__ == '__main__':
+    run_process()
