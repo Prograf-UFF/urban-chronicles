@@ -17,8 +17,14 @@ from preprocessingStructure import run_process as PSRun_process
 
 from customAttributePrecessing import run_process as CAPRun_process
 
+import os
+
 
 if __name__ == '__main__':
+  outputFilePath = "./Data/"
+  if not os.path.exists(outputFilePath):
+      os.makedirs(outputFilePath)
+
   pts = []
   pts.append(Process(target=DTRun_process))
   pts.append(Process(target=POPSRun_process))
