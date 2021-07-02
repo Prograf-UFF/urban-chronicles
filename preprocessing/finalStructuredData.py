@@ -384,7 +384,7 @@ def run_borough(_borough, delimiter, typedata, allowRedundanceRemoval, neighborh
     fStructured.processFinalDataStructure("./Data/{borough}/{fileName}".format(borough=_borough, fileName=fileOutName))
 
 # Functions to be parallelize
-def run_process(delimiter, typedata):
+def run_process_priv(delimiter, typedata):
     neighborhoodFileName = "./Data/{type}_fromboroughs.out".format(type=typedata)
     allowRedundanceRemoval = True
     ps = []
@@ -431,7 +431,7 @@ def run_process():
     ps = []
     for typeData in types:
         print("run {0}".format(typeData))
-        p = Process(target=run_process, args=(delimiter, typeData))
+        p = Process(target=run_process_priv, args=(delimiter, typeData))
         ps.append(p)
         p.start()
     for p in ps:
