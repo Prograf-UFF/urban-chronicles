@@ -23,7 +23,8 @@ import os
 if __name__ == '__main__':
   outputFilePath = "./Data/"
   if not os.path.exists(outputFilePath):
-      os.makedirs(outputFilePath)
+    os.makedirs(outputFilePath)
+  '''
   pts = []
   pts.append(Process(target=DTRun_process))
   pts.append(Process(target=POPSRun_process))
@@ -34,9 +35,13 @@ if __name__ == '__main__':
   for p in pts:
     p.join()
   pts = None
+  
   ADDPOPRun_process()
   SATTRRun_process()
+  '''
   FSDRun_process()
+  
   MCDNRun_process()
   PSRun_process()
   CAPRun_process()
+  
