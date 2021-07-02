@@ -185,7 +185,7 @@ class NeighborhoodHandler():
                     neigh.exportData(_fp, self.__delimiter)
 
 def run_process():
-    fileName = "./Data/nynta_19b/nynta"
+    fileName = "./NewYorkCity/nynta_19b/nynta"
     delimiter = ";"
     # fileName = "/media/claudio/Data/Projects/UFF/LABNY/MapPlutoResources/Neighborhood Tabulation Areas \
     # /NYCNeighborhoods"

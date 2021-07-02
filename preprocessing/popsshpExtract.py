@@ -236,7 +236,7 @@ class POPsHandler():
                     neigh.exportData(_fp, self.__delimiter)
 
 def run_process():
-    fileName = "./Data/nycpops/nycpops"
+    fileName = "./NewYorkCity/nycpops/nycpops"
     delimiter = ";"
     # fileName = "/media/claudio/Data/Projects/UFF/LABNY/MapPlutoResources/Neighborhood Tabulation Areas \
     # /NYCNeighborhoods"
