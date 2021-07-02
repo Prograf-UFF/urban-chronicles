@@ -319,8 +319,8 @@ def run_process_priv(_borough, _fileName, _delimiter):
     for _year in years:
             print("Starting year: {0}".format(_year))
             # fullFilePath = "D:/projects/NewYorkCity/{fileYear}/{borough}/{fileName}"
-            print(os.path.join(os.getcwd(), "./NewYorkCity/{borough}/{fileYear}/{fileName}"))
-            fullFilePathTemplate = os.path.join(os.getcwd(),"./NewYorkCity/{borough}/{fileYear}/{fileName}")
+            print(os.path.join(os.getcwd(), "./NewYorkCity/{fileYear}/{borough}/{fileName}"))
+            fullFilePathTemplate = os.path.join(os.getcwd(),"./NewYorkCity/{fileYear}/{borough}/{fileName}")
             fullFilePath = fullFilePathTemplate.format(borough=_borough, fileYear=_year, fileName=_fileName)
             print(_fileName, fullFilePath)
             if not os.path.exists( fullFilePath + '.shp' ):
@@ -357,19 +357,4 @@ def run_process():
         p.join()
 
 if __name__ == '__main__':
-    _dict = {"Manhattan":"MNMapPLUTO", "Brooklyn":"BKMapPLUTO", "StatenIsland":"SIMapPLUTO", "Bronx":"BXMapPLUTO", "Queens":"QNMapPLUTO" }
-    # _dict = {"StatenIsland":"SIMapPLUTO", "Bronx":"BXMapPLUTO", "Queens":"QNMapPLUTO" }
-    # _dict = {"Queens":"QNMapPLUTO"}
-    ps = []
-    for _borough in boroughs:
-        _fileName = _dict.get(_borough)
-        print(_borough, _fileName)
-        _delimiter = ";"
-        if _fileName == None:
-            continue
-        p = Process(target=run_process_en, args=(_borough, _fileName, _delimiter))
-        ps.append(p)
-    for p in ps:
-        p.start()
-    for p in ps:
-        p.join()
+    run_process()

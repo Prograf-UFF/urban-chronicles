@@ -30,4 +30,5 @@ Histogram/
 *.7z
 *.zip
 *.rar
-NewYorkCity
+Data/
+NewYorkCity/
