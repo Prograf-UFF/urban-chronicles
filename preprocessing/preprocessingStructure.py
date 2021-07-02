@@ -304,7 +304,7 @@ def write_categorical_meta(dict_meta_data):
             elemLine = "{0}".format(data)
             fpout.write(elemLine)
 
-def exportAttributesAsList(borough, file_path_template, _type):
+def exportAttributesAsList(borough, file_path_template, _type, metaFolder):
     # file_path_template = "./Data/{boro}/neigh_{boro}_fullFinalData_withNeighCode_attributes_modifications_{type}.out"
     fileout_path_template = "./Data/{boro}/neigh_{boro}_fullFinalData_withNeighCode_attributes_{type}_list.out"
     strOutTemplate = "{0}{_deli}{1}{_deli}{2}"
@@ -360,7 +360,7 @@ def run_process():
     for borough in boroughs:
         for _type in types:    
             attributesHandler(borough, file_path_template, _type)
-            exportAttributesAsList(borough, file_path_template_mod, _type)
+            exportAttributesAsList(borough, file_path_template_mod, _type, metaFolder)
     
     exportCommunityDistrictMeta()    
     convertShapeCoordinates()
