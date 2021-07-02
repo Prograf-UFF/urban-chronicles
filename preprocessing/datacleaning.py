@@ -319,8 +319,8 @@ def run_process_priv(_borough, _fileName, _delimiter):
     for _year in years:
             print("Starting year: {0}".format(_year))
             # fullFilePath = "D:/projects/NewYorkCity/{fileYear}/{borough}/{fileName}"
-            print(os.path.join(os.getcwd(), "./NewYorkCity/{fileYear}/{borough}/{fileName}"))
-            fullFilePathTemplate = os.path.join(os.getcwd(),"./NewYorkCity/{fileYear}/{borough}/{fileName}")
+            print(os.path.join(os.getcwd(), "./NewYorkCity/{borough}/{fileYear}/{fileName}"))
+            fullFilePathTemplate = os.path.join(os.getcwd(),"./NewYorkCity/{borough}/{fileYear}/{fileName}")
             fullFilePath = fullFilePathTemplate.format(borough=_borough, fileYear=_year, fileName=_fileName)
             print(_fileName, fullFilePath)
             if not os.path.exists( fullFilePath + '.shp' ):
