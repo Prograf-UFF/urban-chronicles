@@ -315,7 +315,7 @@ class DataCleaning():
         print("Test", testID, self.__searchElem("garagearea"))
         testID += 1
 
-def run_process(_borough, _fileName, _delimiter):
+def run_process_priv(_borough, _fileName, _delimiter):
     for _year in years:
             print("Starting year: {0}".format(_year))
             # fullFilePath = "D:/projects/NewYorkCity/{fileYear}/{borough}/{fileName}"
@@ -338,6 +338,24 @@ def run_process(_borough, _fileName, _delimiter):
             dataCleaning.startProcessing()
             # dataCleaning.testLibrary()
 
+def run_process():
+    _dict = {"Manhattan":"MNMapPLUTO", "Brooklyn":"BKMapPLUTO", "StatenIsland":"SIMapPLUTO", "Bronx":"BXMapPLUTO", "Queens":"QNMapPLUTO" }
+    # _dict = {"StatenIsland":"SIMapPLUTO", "Bronx":"BXMapPLUTO", "Queens":"QNMapPLUTO" }
+    # _dict = {"Queens":"QNMapPLUTO"}
+    ps = []
+    for _borough in boroughs:
+        _fileName = _dict.get(_borough)
+        print(_borough, _fileName)
+        _delimiter = ";"
+        if _fileName == None:
+            continue
+        p = Process(target=run_process_priv, args=(_borough, _fileName, _delimiter))
+        ps.append(p)
+    for p in ps:
+        p.start()
+    for p in ps:
+        p.join()
+
 if __name__ == '__main__':
     _dict = {"Manhattan":"MNMapPLUTO", "Brooklyn":"BKMapPLUTO", "StatenIsland":"SIMapPLUTO", "Bronx":"BXMapPLUTO", "Queens":"QNMapPLUTO" }
     # _dict = {"StatenIsland":"SIMapPLUTO", "Bronx":"BXMapPLUTO", "Queens":"QNMapPLUTO" }
@@ -349,7 +367,7 @@ if __name__ == '__main__':
         _delimiter = ";"
         if _fileName == None:
             continue
-        p = Process(target=run_process, args=(_borough, _fileName, _delimiter))
+        p = Process(target=run_process_en, args=(_borough, _fileName, _delimiter))
         ps.append(p)
     for p in ps:
         p.start()
