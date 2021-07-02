@@ -25,9 +25,9 @@ if __name__ == '__main__':
   pts.append(Process(target=NSPRUun_process))
   pts.append(Process(target=CDSPRun_process))
   for p in pts:
-    pts.start()
+    p.start()
   for p in pts:
-    pts.join()
+    p.join()
   pts = None
   ADDPOPRun_process()
   SATTRRun_process()

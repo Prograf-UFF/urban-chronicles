@@ -40,6 +40,10 @@ The team includes:
 	```
 	sudo apt-get install nodejs npm
 
+### MacOS
+
+### Windows
+
 ## Preprocessing Dataset
 
 Here we describe how to generate the input files for Urban Chronicles
@@ -89,7 +93,18 @@ NewYorkCity
 git clone https://github.com/Prograf-UFF/PlutoVis.git
 ```
 
-2. 
+2. Make sure you have python 3.7 or later running on your machine and install all the requirements:
+
+```
+pip install -r ./preprocessing/pylibs/requirements.txt
+```
+
+3. Execute the preprocessing script:
+
+```
+cd ./preprocessing
+python ./preprocessingFacade.py
+```
 
 ## Running Urban Chronicles
 
