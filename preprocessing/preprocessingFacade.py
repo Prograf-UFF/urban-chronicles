@@ -21,7 +21,6 @@ import os
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
   outputFilePath = "./Data/"
   if not os.path.exists(outputFilePath):
     os.makedirs(outputFilePath)
@@ -39,26 +38,8 @@ if __name__ == '__main__':
   
   ADDPOPRun_process()
   SATTRRun_process()
-  '''
-=======
-  # outputFilePath = "./Data/"
-  # if not os.path.exists(outputFilePath):
-  #     os.makedirs(outputFilePath)
-  # pts = []
-  # pts.append(Process(target=DTRun_process))
-  # pts.append(Process(target=POPSRun_process))
-  # pts.append(Process(target=NSPRUun_process))
-  # pts.append(Process(target=CDSPRun_process))
-  # for p in pts:
-  #   p.start()
-  # for p in pts:
-  #   p.join()
-  # pts = None
-  # ADDPOPRun_process()
-  # SATTRRun_process()
->>>>>>> 08948e4d213d9bc0446b18b0cd611372f05c9a73
   FSDRun_process()
-  
+  '''
   MCDNRun_process()
   PSRun_process()
   CAPRun_process()
