@@ -71,9 +71,12 @@ class POPSHandler():
                 index += 1
                 print("{0}/{1}".format(index, length))
 
-if __name__ == '__main__':
+def run_process():
     popData = readPOPData(popsFileName)
     datasetFileTemplate = './Data/{_borough}/{fileYear}/{_borough}_{fileYear}_rawattr.out'
     popsHandler = POPSHandler(datasetFileTemplate)
     popsHandler.fillPOPsAttribute(datasetFileTemplate, popData)
+
+if __name__ == '__main__':
+    run_process()
     
