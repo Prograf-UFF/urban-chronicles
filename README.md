@@ -40,6 +40,10 @@ The team includes:
 	```
 	sudo apt-get install nodejs npm
 
+### MacOS
+
+### Windows
+
 ## Preprocessing Dataset
 
 Here we describe how to generate the input files for Urban Chronicles
@@ -48,7 +52,7 @@ Here we describe how to generate the input files for Urban Chronicles
 
 Urban Chronicles takes as input a modified version of the raw PLUTO dataset available [here](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). The New York Department of City Planning provides one set of files per year containing the geometry of the lots and the associated metadata. Below, are the steps necessary to the generation of Urban Chronicle's input files.
 
-If you want to skip downloading all files from the Department of City Planning website, we bundled every file [here](https://drive.google.com/file/d/1BlEny9o1r7a0oWldhD8iVMPJiZmY33qw/view?usp=sharing).
+If you want to skip downloading all files from the Department of City Planning website, we bundled every file [here](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing).
 
 
 1. Download every MapPLUTO file from 2002 to 2017 from [here](https://www1.nyc.gov/site/planning/data-maps/open-data/bytes-archive.page?sorts[year]=0) and organize them inside a folder following the structure below:
@@ -81,6 +85,8 @@ NewYorkCity
 
 ```
 
+2. ADD NYCPOPS
+
 ### Running Preprocessing Scripts
 
 1. We first need to clone the repository:
@@ -89,7 +95,18 @@ NewYorkCity
 git clone https://github.com/Prograf-UFF/PlutoVis.git
 ```
 
-2. 
+2. Make sure you have python 3.7 or later running on your machine and install all the requirements:
+
+```
+pip install -r ./preprocessing/pylibs/requirements.txt
+```
+
+3. Execute the preprocessing script:
+
+```
+cd ./preprocessing
+python ./preprocessingFacade.py
+```
 
 ## Running Urban Chronicles
 
