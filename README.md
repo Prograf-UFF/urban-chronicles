@@ -57,6 +57,7 @@ If you want to skip downloading all files from the Department of City Planning w
 
 1. Download every MapPLUTO file from 2002 to 2017 from [here](https://www1.nyc.gov/site/planning/data-maps/open-data/bytes-archive.page?sorts[year]=0) and organize them inside a folder following the structure below:
 
+## CHANGE IT! Years come before boroughs
 
 ```
 NewYorkCity
@@ -85,8 +86,6 @@ NewYorkCity
 
 ```
 
-2. ADD NYCPOPS
-
 ### Running Preprocessing Scripts
 
 1. We first need to clone the repository:
@@ -106,6 +105,12 @@ pip install -r ./preprocessing/pylibs/requirements.txt
 ```
 cd ./preprocessing
 python ./preprocessingFacade.py
+```
+
+4. Copy the dist folder to the system folder as below:
+
+```
+cp -r ./preprocessing/dist/ ./system
 ```
 
 ## Running Urban Chronicles
