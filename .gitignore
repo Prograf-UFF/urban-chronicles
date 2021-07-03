@@ -31,4 +31,5 @@ Histogram/
 *.zip
 *.rar
 Release/
+[dD]ata*/*
 
