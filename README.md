@@ -18,8 +18,8 @@ The team includes:
 
 * [Installation prerequisites](#installation-prerequisites)
     * [Linux (Ubuntu)](#linux-ubuntu)
-	* [Linux (Ubuntu)](#macos)
-	* [Linux (Ubuntu)](#windows-10)
+	* [MacOS](#macos)
+	* [Windows](#windows-10)
 * [Preprocessing Dataset](#preprocessing-dataset)
 * [Running Urban Chronicles](#running-urban-chronicles)
     * [Web client](#web-client)
