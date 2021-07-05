@@ -12,15 +12,18 @@ QStringList Utilities::s_lAttributesHigh;
 QStringList Utilities::s_lAttributesLow;
 QStringList Utilities::s_lAttributesCateg;
 
-QStringList Utilities::s_lYears = { "2002","2003","2004","2005","2006","2007", "2009", "2009.2", "2010", "2010.2", "2011", "2011.2", "2012", "2012.2", "2013", "2013.2", "2014", "2014.2", "2015", "2016", "2016.2", "2017" };
+//QStringList Utilities::s_lYears = { "2002","2003","2004","2005","2006","2007", "2009", "2009.2", "2010", "2010.2", "2011", "2011.2", "2012", "2012.2", "2013", "2013.2", "2014", "2014.2", "2015", "2016", "2016.2", "2017" };
+QStringList Utilities::s_lYears = { "2002","2003" };
+
+
 
 QStringList Utilities::s_lBoroughsIndex = { "Manhattan", "Bronx", "Brooklyn", "Queens", "StatenIsland" };
 QStringList Utilities::s_lBoroughNickName = { "MN", "BX", "BK", "QN", "SI" };
 QStringList Utilities::s_lMetrics = {"Min", "Max", "Sum", "Count", "Average"};
 QStringList Utilities::s_ltypes = { "high", "low", "categ" };
 
-// QStringList Utilities::s_lBoroughs = { "Manhattan" };
-QStringList Utilities::s_lBoroughs = { "Manhattan" , "Brooklyn"};
+QStringList Utilities::s_lBoroughs = { "Manhattan" };
+//QStringList Utilities::s_lBoroughs = { "Manhattan" , "Brooklyn"};
 
 QString Utilities::s_sDatasetFileNameTemplate = "/Dataset/%1/%2_fullFinalData_withNeighCode.out";
 QString Utilities::s_sAttributesFileNameTemplate = "/Attributes/%1/%2_fullFinalData_withNeighCode_attributes_{TYPE}.out";

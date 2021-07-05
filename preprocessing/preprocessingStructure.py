@@ -4,6 +4,7 @@ import json
 import os
 
 from Model.util import *
+from Model.util import categs as types
 globalProjection = get_projection()
 deli = ";"
 
@@ -354,7 +355,6 @@ def run_process():
     metaFolder = "./Data/Metas"
     if not os.path.exists(metaFolder):
         os.makedirs(metaFolder)
-    types = ['high','low','categ']
     file_path_template = "./Data/{boro}/neigh_{boro}_fullFinalData_withNeighCode_attributes_{type}.out"
     file_path_template_mod = "./Data/{boro}/neigh_{boro}_fullFinalData_withNeighCode_attributes_modifications_{type}.out"
     for borough in boroughs:

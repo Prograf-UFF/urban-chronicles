@@ -17,8 +17,8 @@ years = ["2002", "2003"]
 #                     "BLDGCLASS", "BOROCODE", "BLOCK", "HISTDIST", "ZONEDIST1", "SPDIST1", "OVERLAY1", "LANDMARK",
 #                     "BOROUGH"]
 
-boroughs = ["Brooklyn", "Manhattan"]
-# boroughs = ["Manhattan", "Bronx", "Brooklyn", "Queens", "StatenIsland"]
+boroughs = ["Manhattan"]
+#boroughs = ["Manhattan", "Bronx", "Brooklyn", "Queens", "StatenIsland"]
 def getBoroughCode(borough):
     b = ["Manhattan", "Bronx", "Brooklyn", "Queens", "StatenIsland"]
     return b.index(borough) + 1
@@ -29,6 +29,8 @@ BBLATTRIBUTES = ["BOROCODE", "BOROUGH", "BLOCK", "LOT"]
 
 # importantFields = ["BLDGAREA", "RESAREA", "COMAREA", "RETAILAREA", "GARAGEAREA", "FACTRYAREA", "OTHERAREA", "RESIDFAR", "COMMFAR", "FACILFAR","NUMFLOORS", "ASSESSLAND", "ASSESSTOT", "LOTAREA", "LANDUSE", "BLDGCLASS", "BUILTFAR", "ZONEDIST1", "ZONEDIST2", "ZONEDIST3", "ZONEDIST4", "OVERLAY1", "OVERLAY2", "SPDIST1", "SPDIST2", "SPDIST3", "LTDHEIGHT", "SPLITZONE", "EXEMPTTOT", "POPCREATED"]
 # extract_fields = ["BLDGAREA", "RESAREA", "COMAREA", "RETAILAREA", "GARAGEAREA", "FACTRYAREA", "OTHERAREA", "RESIDFAR", "COMMFAR", "FACILFAR","NUMFLOORS", "ASSESSLAND", "ASSESSTOT", "LOTAREA"]
+
+categs = ['high','low','categ']
 
 numericalHigh = ["FACTRYAREA", "RETAILAREA", "GARAGEAREA", "ASSESSTOT", "BLDGAREA", "ASSESSLAND", "EXEMPTTOT"]
 def getNumericalHigh():
