@@ -42,7 +42,26 @@ The team includes:
 
 ### MacOS
 
-### Windows
+1. Download Homebrew, a package manager for macOS, at [brew.sh](https://brew.sh/) and install it.
+2. Download Qt 5.14 (or later version) at [qt.io/download-open-source](https://www.qt.io/download-open-source/) and install it.
+3. Install GCC through [XCode](https://developer.apple.com/xcode/) or brew:
+
+	```
+	brew install gcc@4.8
+	```
+
+4. Install Node.js:
+
+	```
+	brew install nodejs npm
+	```
+	
+
+### Windows 7, 8, 10
+
+1. Download Qt 5.14 (or later version) at [qt.io/download-open-source](https://www.qt.io/download-open-source/) and install it. When selecting the Qt version to install, make sure to also select MingW for installation. 
+2. Make sure GCC is installed through MingW.
+3. Download Node.js LTS at [nodejs.org/en/download/](https://nodejs.org/en/download/) and install it.
 
 ## Preprocessing Dataset
 
@@ -84,8 +103,6 @@ NewYorkCity
     | ...
 
 ```
-
-2. ADD NYCPOPS
 
 ### Running Preprocessing Scripts
 
