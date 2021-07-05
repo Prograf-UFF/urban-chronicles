@@ -1,5 +1,7 @@
 # Urban Chronicles
 
+![Chronicles Interface](https://raw.githubusercontent.com/Prograf-UFF/urban-chronicle/main/images/interface.png)
+
 This repository contains the source code for Urban Chronicles, a visual analytics system that enables interactive exploration of changes in land use pattern. Using New York City’s Primary Land Use Tax Lot Output (PLUTO) as an example, the system allows the exploration of  the data over several years at different scales. Urban Chronicles supports on-the-fly aggregation and filtering operations by using a tree-based data structure that leverages the hierarchical nature of the data set to index the shape and attributes of geographical regions that change over time.
 
 The team includes:
@@ -80,26 +82,20 @@ If you want to skip downloading all files from the Department of City Planning w
 ```
 NewYorkCity
 |
-└───Bronx
-└───Brooklyn
-└───Queens
-└───Manhattan
-│   │   ...
-│   └───2002
-|   └───2003
-|   └───2004
-|   └───2005
-|   └───2006
-|   └───...
-|   └───2009.2
-|   └───...
-|   └───2017
-│       |   MNMapPLUTO.shp
-|       |   MNMapPLUTO.dbf
-|       |   MNMapPLUTO.prj
-|       |   MNMapPLUTO.shx
-|       |   ...
-└───StatenIsland
+└───2002
+└───2003
+└───2004
+└───2005
+│   └───Bronx
+|   └───Brooklyn
+|   └───Queens
+|   └───Manhattan
+│   |   |   MNMapPLUTO.shp
+|   |   |   MNMapPLUTO.dbf
+|   |   |   MNMapPLUTO.prj
+|   |   |   MNMapPLUTO.shx
+|   └───StatenIsland
+└───2009.2
     | ...
 ```
 
@@ -117,7 +113,14 @@ git clone https://github.com/Prograf-UFF/PlutoVis.git
 pip install -r ./preprocessing/pylibs/requirements.txt
 ```
 
-3. Execute the preprocessing script:
+3. If you choose to download the bundle provided [here](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing), unzip the bundle inside `./preprocessing` with the command below. Otherwise, only move the NewYorCity folder generated as described in the previous section to `./preprocessing`
+
+```
+mv /path/to/downloads/NewYorkCity_complete.zip ./preprocessing
+unzip ./preprocessing/NewYorkCity_complete.zip
+```
+
+4. Execute the preprocessing script:
 
 ```
 cd ./preprocessing
