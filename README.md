@@ -18,8 +18,9 @@ The team includes:
 
 * [Installation prerequisites](#installation-prerequisites)
     * [Linux (Ubuntu)](#linux-ubuntu)
+	* [Linux (Ubuntu)](#macos)
+	* [Linux (Ubuntu)](#windows-10)
 * [Preprocessing Dataset](#preprocessing-dataset)
-    * [Linux (Ubuntu)](#linux-ubuntu)
 * [Running Urban Chronicles](#running-urban-chronicles)
     * [Web client](#web-client)
     * [Online Version](#online-version)
@@ -57,7 +58,7 @@ The team includes:
 	```
 	
 
-### Windows 7, 8, 10
+### Windows 10
 
 1. Download Qt 5.14 (or later version) at [qt.io/download-open-source](https://www.qt.io/download-open-source/) and install it. When selecting the Qt version to install, make sure to also select MingW for installation. 
 2. Make sure GCC is installed through MingW.
@@ -75,8 +76,6 @@ If you want to skip downloading all files from the Department of City Planning w
 
 
 1. Download every MapPLUTO file from 2002 to 2017 from [here](https://www1.nyc.gov/site/planning/data-maps/open-data/bytes-archive.page?sorts[year]=0) and organize them inside a folder following the structure below:
-
-## CHANGE IT! Years come before boroughs
 
 ```
 NewYorkCity
@@ -136,13 +135,11 @@ cp -r ./preprocessing/dist/ ./system
 
 ### Web Client
 
-If you want to go ahead and use Urban Chronicles without going through the preprocessing phase described above according to your OS:
+If you want to go ahead and use Urban Chronicles without going through the preprocessing phase described above, download the input dataset [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view). 
 
 #### Linux and MacOS
 
-First, download the input dataset [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view), and follow the steps bellow:
-
-1. Once downloaded preprocessed file mentioned above, go to the root folder of this repository and extract the file `data.zip` inside `system/`
+1. Once downloaded the preprocessed files mentioned above (or generated through the preprocessing section above), go to the root folder of this repository and extract the file `data.zip` inside `system/`
 
 ```
 unzip path/to/data.zip -d ./system/
