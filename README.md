@@ -101,7 +101,6 @@ NewYorkCity
 |       |   ...
 └───StatenIsland
     | ...
-
 ```
 
 ### Running Preprocessing Scripts
