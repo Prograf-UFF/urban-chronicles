@@ -70,13 +70,13 @@ The team includes:
 
 ## Preprocessing Dataset (optional)
 
-Here we describe how to generate the input files for Urban Chronicles. **This is an optional step; if you want to skip the preprocessing step, you can simply download the already preprocessed files [here](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing) and jump to [Running Urban Chronicles](#running-urban-chronicles).**
+Here we describe how to generate the input files for Urban Chronicles. **This is an optional step; if you want to skip the preprocessing step, you can simply download the already preprocessed files [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view) and jump to [Running Urban Chronicles](#running-urban-chronicles).**
 
 ### Downloading the Dataset
 
 Urban Chronicles takes as input a modified version of the raw PLUTO dataset available [here](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). The New York Department of City Planning provides one set of files per year containing the geometry of the lots and the associated metadata.
 
-**If you want to skip downloading each file separately from the Department of City Planning website, we bundled them in the zip file [NewYorkCity_complete.zip](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing).**
+**If you want to skip downloading each file separately from the Department of City Planning website, we bundled them in the zip file [NewYorkCity_complete.zip](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view).**
 
 If you want to use the raw PLUTO dataset, download the MapPLUTO files from 2002 to 2017 from [here](https://www1.nyc.gov/site/planning/data-maps/open-data/bytes-archive.page?sorts[year]=0) and organize them inside a folder with the following structure:
 
@@ -138,7 +138,7 @@ cp -r ./preprocessing/dist/data ./system
 
 ### Web Client
 
-If you want to go ahead and use Urban Chronicles without going through the preprocessing phase described above, download the input dataset [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view). 
+If you want to go ahead and use Urban Chronicles without going through the preprocessing steps described above, download the proprocessed dataset [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view). 
 
 #### Linux and MacOS
 
@@ -171,7 +171,7 @@ npm install
 ng build
 ```
 
-3. Run the script that will compile and load the Urban Chronicles data structure to the backend server:
+3. Run the script that will load the Urban Chronicles data structure to the backend server:
 ```
 ./makerunfile.sh
 ```
@@ -180,7 +180,7 @@ ng build
 
 #### Windows
 
-1. First, download the pre-compiled release of Urban Chronicles [here](https://drive.google.com/file/d/1xHNegEY7fb3UHysTLZEOR-yg0bWHZn9u/view?usp=sharing).
+1. First, download the compiled release of Urban Chronicles [here](https://drive.google.com/file/d/1xHNegEY7fb3UHysTLZEOR-yg0bWHZn9u/view?usp=sharing).
 
 2. Unzip the `.zip` folder inside `system/`. You should have a structure like the one below
 
