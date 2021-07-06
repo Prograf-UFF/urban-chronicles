@@ -140,9 +140,7 @@ cp -r ./preprocessing/dist/data ./system
 
 If you want to go ahead and use Urban Chronicles without going through the preprocessing steps described above, download the proprocessed dataset [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view). 
 
-#### Linux and MacOS
-
-1. If you went through the preprocessing stage described above, you should have a `/data` folder inside `./system`. Otherwise, if you downloaded the proprocessed files in the link above, extract the file `data.zip` inside `./system`. You must have a folder structure like the one represented below:
+If you went through the preprocessing stage described above, you should have a `/data` folder inside `./system`. Otherwise, if you downloaded the proprocessed files in the link above, extract the file `data.zip` inside `./system`. You must have a folder structure like the one represented below:
 
 ```
 unzip path/to/data.zip -d ./system/
@@ -153,7 +151,7 @@ urban-chronicle
 |
 └───system
 │   │   ...
-│   └───Data
+│   └───data
 |       | 
 |       |
 |   |   ...
@@ -163,7 +161,10 @@ urban-chronicle
 
 ```
 
-2. Generate the frontend application build:
+
+#### Linux and MacOS 
+
+1. Generate the frontend application build:
 
 ```
 cd ./system/front
@@ -171,12 +172,12 @@ npm install
 ng build
 ```
 
-3. Run the script that will load the Urban Chronicles data structure to the backend server:
+2. Run the script that will load the Urban Chronicles data structure to the backend server:
 ```
 ./makerunfile.sh
 ```
 
-4. Finally, go to `localhost:4200` to start using Urban Chronicles .
+3. Finally, go to `localhost:4200` to start using Urban Chronicles .
 
 #### Windows
 
@@ -192,14 +193,12 @@ urban-chronicle
 │   │   ...
 │   │   Release
 |   |   runUrbanChroniclesServer.bat
-|   |   Data
+|   |   data
 |   |   ...
 │   
 └───preprocessing
     | ...
 ```
-
-3. 
 
 3. Generate the frontend application build:
 
