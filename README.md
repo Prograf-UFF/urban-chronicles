@@ -153,7 +153,7 @@ urban-chronicle
 |
 └───system
 │   │   ...
-│   └───data
+│   └───Data
 |       | 
 |       |
 |   |   ...
@@ -192,6 +192,7 @@ urban-chronicle
 │   │   ...
 │   │   Release
 |   |   runUrbanChroniclesServer.bat
+|   |   Data
 |   |   ...
 │   
 └───preprocessing
