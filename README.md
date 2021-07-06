@@ -128,7 +128,7 @@ cd ./preprocessing
 python ./preprocessingFacade.py
 ```
 
-4. Copy the dist folder to the system folder as below:
+4. Copy the data folder to the system folder as below:
 
 ```
 cp -r ./preprocessing/dist/data ./system
@@ -142,7 +142,7 @@ If you want to go ahead and use Urban Chronicles without going through the prepr
 
 #### Linux and MacOS
 
-1. Once downloaded the preprocessed files mentioned above (or generated through the preprocessing section above), go to the root folder of this repository and extract the file `data.zip` inside `system/`
+1. If you went through the preprocessing stage described above, you should have a `/data` folder inside `./system`. Otherwise, if you downloaded the proprocessed files in the link above, extract the file `data.zip` inside `./system`. You must have a folder structure like the one represented below:
 
 ```
 unzip path/to/data.zip -d ./system/
@@ -198,6 +198,8 @@ urban-chronicle
 └───preprocessing
     | ...
 ```
+
+3. 
 
 3. Generate the frontend application build:
 
