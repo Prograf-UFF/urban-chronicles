@@ -2,8 +2,8 @@ from pyproj import CRS
 # from pyproj import Proj
 from pyproj.transformer import Transformer
 
-years = ["2002", "2003"]
-#years = ['2002','2003','2004','2005','2006','2007', '2009', '2009.2', '2010', '2010.2', '2011', '2011.2', '2012', '2012.2', '2013', '2013.2', '2014', '2014.2', '2015', '2016', '2016.2', '2017']
+#years = ["2002", "2003"]
+years = ['2002','2003','2004','2005','2006','2007', '2009', '2009.2', '2010', '2010.2', '2011', '2011.2', '2012', '2012.2', '2013', '2013.2', '2014', '2014.2', '2015', '2016', '2016.2', '2017']
 # years = ['2002','2003','2004','2005','2006','2007','2009', '2009.2', '2010', '2010.2', '2011', '2011.2', '2012',
 # '2012.2', '2013', '2013.2', '2014', '2014.2', '2015', '2016', '2016.2', '2017']
 # ['2012','2013','2014','2015'] #['2005','2006','2007']
@@ -17,8 +17,8 @@ years = ["2002", "2003"]
 #                     "BLDGCLASS", "BOROCODE", "BLOCK", "HISTDIST", "ZONEDIST1", "SPDIST1", "OVERLAY1", "LANDMARK",
 #                     "BOROUGH"]
 
-boroughs = ["Manhattan"]
-#boroughs = ["Manhattan", "Bronx", "Brooklyn", "Queens", "StatenIsland"]
+#boroughs = ["Manhattan"]
+boroughs = ["Manhattan", "Bronx", "Brooklyn", "Queens", "StatenIsland"]
 def getBoroughCode(borough):
     b = ["Manhattan", "Bronx", "Brooklyn", "Queens", "StatenIsland"]
     return b.index(borough) + 1

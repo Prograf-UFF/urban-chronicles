@@ -42,6 +42,7 @@ The team includes:
 
 	```
 	sudo apt-get install nodejs npm
+	```
 
 ### MacOS
 
@@ -130,7 +131,7 @@ python ./preprocessingFacade.py
 4. Copy the dist folder to the system folder as below:
 
 ```
-cp -r ./preprocessing/dist/ ./system
+cp -r ./preprocessing/dist/data ./system
 ```
 
 ## Running Urban Chronicles
@@ -162,12 +163,20 @@ urban-chronicle
 
 ```
 
-2. Run the script that will load the Urban Chronicles data structure to the backend server:
+2. Generate the frontend application build
+
+```
+cd ./system/front
+npm install
+ng build
+```
+
+3. Run the script that will load the Urban Chronicles data structure to the backend server:
 ```
 ./makerunfile.sh
 ```
 
-3. Finally, go to `localhost:4200` to start using Urban Chronicles 
+4. Finally, go to `localhost:4200` to start using Urban Chronicles 
 
 #### Windows
 
