@@ -70,13 +70,13 @@ The team includes:
 
 ## Preprocessing Dataset (optional)
 
-Here we describe how to generate the input files for Urban Chronicles. **This is an optional step to ensure the reproducibility of our method; if you want to skip the preprocessing step, you can simply download the already preprocessed files [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view) and jump to [Running Urban Chronicles](#running-urban-chronicles).**
+Here we describe how to generate the input files for Urban Chronicles. **This is an optional step; if you want to skip the preprocessing step, you can simply download the already preprocessed files [here](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing) and jump to [Running Urban Chronicles](#running-urban-chronicles).**
 
 ### Downloading the Dataset
 
 Urban Chronicles takes as input a modified version of the raw PLUTO dataset available [here](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). The New York Department of City Planning provides one set of files per year containing the geometry of the lots and the associated metadata.
 
-**If you want to skip downloading all files from the Department of City Planning website, we bundled the files [here](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing).**
+**If you want to skip downloading each file separately from the Department of City Planning website, we bundled them in the zip file [NewYorkCity_complete.zip](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing).**
 
 If you want to use the raw PLUTO dataset, download the MapPLUTO files from 2002 to 2017 from [here](https://www1.nyc.gov/site/planning/data-maps/open-data/bytes-archive.page?sorts[year]=0) and organize them inside a folder with the following structure:
 
@@ -102,7 +102,7 @@ NewYorkCity
 
 ### Running Preprocessing Scripts
 
-1. We first need to clone the repository:
+1. First, clone the repository:
 
 ```
 git clone https://github.com/Prograf-UFF/PlutoVis.git
@@ -114,7 +114,7 @@ git clone https://github.com/Prograf-UFF/PlutoVis.git
 pip install -r ./preprocessing/pylibs/requirements.txt
 ```
 
-3. If you choose to download the bundle provided [here](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing), unzip the bundle inside `./preprocessing` with the command below. Otherwise, only move the NewYorCity folder generated as described in the previous section to `./preprocessing`
+3. If you choose to download the NewYorkCity_complete.zip bundle provided [here](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing), unzip the bundle inside `./preprocessing` with the command below. Otherwise, only move the NewYorCity folder generated as described in the previous section to `./preprocessing`:
 
 ```
 mv /path/to/downloads/NewYorkCity_complete.zip ./preprocessing
