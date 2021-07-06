@@ -2,14 +2,16 @@
 
 ![Chronicles Interface](https://raw.githubusercontent.com/Prograf-UFF/urban-chronicle/main/images/interface.png)
 
-This repository contains the source code for Urban Chronicles, a visual analytics system that enables interactive exploration of changes in land use pattern. Using New York City’s Primary Land Use Tax Lot Output (PLUTO) as an example, the system allows the exploration of  the data over several years at different scales. Urban Chronicles supports on-the-fly aggregation and filtering operations by using a tree-based data structure that leverages the hierarchical nature of the data set to index the shape and attributes of geographical regions that change over time.
+This repository contains the source code for Urban Chronicles, a visual analytics system that enables interactive exploration of changes in land use pattern. Using New York City’s Primary Land Use Tax Lot Output ([PLUTO](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)) as an example, the system allows the exploration of  the data over several years at different resolutions. Urban Chronicles supports on-the-fly aggregation and filtering operations by using a tree-based data structure that leverages the hierarchical nature of the data set to index the shape and attributes of geographical regions that change over time.
+
+This README file details the [installation prerequisites](#installation-prerequisites), the [steps to preprocess the data](#preprocessing-dataset), and finally [running the visual analytics system](#running-urban-chronicles), for Linux, MacOS and Windows systems.
 
 The team includes:
 
 * Claudio Santos (Universidade Federal Fluminense)
 * Maryam Hosseini (New York University)
 * Joao Rulff (New York University)
-* [Fabio Miranda](https://fmiranda.me) (New York University)
+* [Fabio Miranda](https://fmiranda.me) (University of Illinois at Chicago)
 * [Nivan Ferreira](https://www.cin.ufpe.br/~nivan/) (Universidade Federal de Pernambuco)
 * [Luc Wilson](https://ui.kpf.com) (Kohn Pedersen Fox)
 * [Cláudio T. Silva](https://vgc.poly.edu/~csilva/) (New York University)
@@ -22,10 +24,9 @@ The team includes:
     * [Linux (Ubuntu)](#linux-ubuntu)
 	* [MacOS](#macos)
 	* [Windows](#windows-10)
-* [Preprocessing Dataset](#preprocessing-dataset)
+* [Preprocessing Dataset (optional)](#preprocessing-dataset-optional)
 * [Running Urban Chronicles](#running-urban-chronicles)
     * [Web client](#web-client)
-    * [Online Version](#online-version)
 
 
 ## Installation Prerequisites
@@ -67,9 +68,9 @@ The team includes:
 2. Make sure GCC is installed through MingW.
 3. Download Node.js LTS at [nodejs.org/en/download/](https://nodejs.org/en/download/) and install it.
 
-## Preprocessing Dataset
+## Preprocessing Dataset (optional)
 
-Here we describe how to generate the input files for Urban Chronicles
+Here we describe how to generate the input files for Urban Chronicles. This is an optional step; if you want to skip the preprocessing step, you can simply download the already preprocessed files [here](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing) and jump to [Running Urban Chronicles](#running-urban-chronicles).
 
 ### Downloading the Dataset
 
@@ -163,7 +164,7 @@ urban-chronicle
 
 ```
 
-2. Generate the frontend application build
+2. Generate the frontend application build:
 
 ```
 cd ./system/front
@@ -176,13 +177,13 @@ ng build
 ./makerunfile.sh
 ```
 
-4. Finally, go to `localhost:4200` to start using Urban Chronicles 
+4. Finally, go to `localhost:4200` to start using Urban Chronicles .
 
 #### Windows
 
-1. First, download the `.zip` bundle [here](https://drive.google.com/file/d/1xHNegEY7fb3UHysTLZEOR-yg0bWHZn9u/view?usp=sharing)
+1. First, download the `.zip` bundle [here](https://drive.google.com/file/d/1xHNegEY7fb3UHysTLZEOR-yg0bWHZn9u/view?usp=sharing).
 
-2. Unzip the bundle inside `system/`
+2. Unzip the bundle inside `system/`.
 
 ```
 urban-chronicle
@@ -198,9 +199,5 @@ urban-chronicle
     | ...
 ```
 
-3. Run `runUrbanChroniclesServer.bat` by double clicking it 
-
-### Online Version
-
-An online version of the system will soon be available [here]()
+3. Run `runUrbanChroniclesServer.bat` by double clicking it.
 
