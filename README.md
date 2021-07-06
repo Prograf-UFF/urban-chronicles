@@ -199,5 +199,13 @@ urban-chronicle
     | ...
 ```
 
-3. Run `runUrbanChroniclesServer.bat` by double clicking it.
+3. Generate the frontend application build:
+
+```
+cd ./system/front
+npm install
+ng build
+```
+
+4. Run `runUrbanChroniclesServer.bat` by double clicking it.
 
