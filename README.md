@@ -182,7 +182,7 @@ ng build
 
 1. First, download the compiled release of Urban Chronicles [here](https://drive.google.com/file/d/1xHNegEY7fb3UHysTLZEOR-yg0bWHZn9u/view?usp=sharing).
 
-2. Unzip the bundle inside `system/`.
+2. Unzip the `.zip` folder inside `system/`. You should have a structure like the one below
 
 ```
 urban-chronicle
