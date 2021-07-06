@@ -180,7 +180,7 @@ ng build
 
 #### Windows
 
-1. First, download the `.zip` compiled release of Urban Chronicles [here](https://drive.google.com/file/d/1xHNegEY7fb3UHysTLZEOR-yg0bWHZn9u/view?usp=sharing).
+1. First, download the compiled release of Urban Chronicles [here](https://drive.google.com/file/d/1xHNegEY7fb3UHysTLZEOR-yg0bWHZn9u/view?usp=sharing).
 
 2. Unzip the bundle inside `system/`.
 
