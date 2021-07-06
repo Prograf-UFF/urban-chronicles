@@ -70,7 +70,7 @@ The team includes:
 
 ## Preprocessing Dataset (optional)
 
-Here we describe how to generate the input files for Urban Chronicles. **This is an optional step; if you want to skip the preprocessing step, you can simply download the already preprocessed files [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view) and jump to [Running Urban Chronicles](#running-urban-chronicles).**
+Here we describe how to generate the input files for Urban Chronicles. **This is an optional step to ensure the reproducibility of our method; if you want to skip the preprocessing step, you can simply download the already preprocessed files [here](https://drive.google.com/file/d/1OPc8uD-N-SGJQ0KuTO7eJeN78FaIdue2/view) and jump to [Running Urban Chronicles](#running-urban-chronicles).**
 
 ### Downloading the Dataset
 
