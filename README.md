@@ -74,12 +74,11 @@ Here we describe how to generate the input files for Urban Chronicles. **This is
 
 ### Downloading the Dataset
 
-Urban Chronicles takes as input a modified version of the raw PLUTO dataset available [here](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). The New York Department of City Planning provides one set of files per year containing the geometry of the lots and the associated metadata. Below, are the steps necessary to the generation of Urban Chronicle's input files.
+Urban Chronicles takes as input a modified version of the raw PLUTO dataset available [here](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). The New York Department of City Planning provides one set of files per year containing the geometry of the lots and the associated metadata.
 
-If you want to skip downloading all files from the Department of City Planning website, we bundled every file [here](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing).
+**If you want to skip downloading all files from the Department of City Planning website, we bundled the files [here](https://drive.google.com/file/d/1HtFAEBYIdY4Mux8iN_Vajm4nyOcmVAFn/view?usp=sharing).**
 
-
-1. Download every MapPLUTO file from 2002 to 2017 from [here](https://www1.nyc.gov/site/planning/data-maps/open-data/bytes-archive.page?sorts[year]=0) and organize them inside a folder following the structure below:
+If you want to use the raw PLUTO dataset, download the MapPLUTO files from 2002 to 2017 from [here](https://www1.nyc.gov/site/planning/data-maps/open-data/bytes-archive.page?sorts[year]=0) and organize them inside a folder with the following structure:
 
 ```
 NewYorkCity
