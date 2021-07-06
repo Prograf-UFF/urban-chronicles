@@ -171,7 +171,7 @@ npm install
 ng build
 ```
 
-3. Run the script that will load the Urban Chronicles data structure to the backend server:
+3. Run the script that will compile and load the Urban Chronicles data structure to the backend server:
 ```
 ./makerunfile.sh
 ```
@@ -180,7 +180,7 @@ ng build
 
 #### Windows
 
-1. First, download the compiled release of Urban Chronicles [here](https://drive.google.com/file/d/1xHNegEY7fb3UHysTLZEOR-yg0bWHZn9u/view?usp=sharing).
+1. First, download the pre-compiled release of Urban Chronicles [here](https://drive.google.com/file/d/1xHNegEY7fb3UHysTLZEOR-yg0bWHZn9u/view?usp=sharing).
 
 2. Unzip the `.zip` folder inside `system/`. You should have a structure like the one below
 
