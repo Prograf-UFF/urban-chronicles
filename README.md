@@ -4,6 +4,8 @@
 
 This repository contains the source code for Urban Chronicles, a visual analytics system that enables interactive exploration of changes in land use pattern. Using New York City’s Primary Land Use Tax Lot Output ([PLUTO](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)) as an example, the system allows the exploration of  the data over several years at different resolutions. Urban Chronicles supports on-the-fly aggregation and filtering operations by using a tree-based data structure that leverages the hierarchical nature of the data set to index the shape and attributes of geographical regions that change over time.
 
+A video showcasing the system can be found [here](https://youtu.be/px4YaPr7F98).
+
 This README file details the [installation prerequisites](#installation-prerequisites), the [steps to preprocess the data](#preprocessing-dataset), and finally [running the visual analytics system](#running-urban-chronicles), for Linux, MacOS and Windows systems.
 
 The team includes:
